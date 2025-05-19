@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang=ru>
+<head>
+<meta charset=UTF-8>
+<title>💀 CYBERPUNK HACKER TERMINAL v4.1 💀</title>
+<style>:root{--matrix-green:#00ff88;--neon-purple:#cc00ff;--hacker-blue:#0088ff;--cyber-red:#ff0033;--cyber-yellow:#ffcc00;--dark-bg:#0a0a0a;--card-bg:rgba(0, 20, 10, 0.7);--terminal-bg:rgba(0, 10, 5, 0.9)}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--dark-bg);color:var(--matrix-green);font-family:'Courier New',monospace;overflow-x:hidden;min-height:100vh;cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%2300ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><circle cx="12" cy="12" r="4"/></svg>'),auto}@keyframes blink{50%{opacity:0}}@keyframes glitch{0%{text-shadow:2px 0 var(--neon-purple),-2px 0 var(--hacker-blue)}20%{transform:translate(-3px,3px)}40%{transform:translate(-3px,-3px)}60%{transform:translate(3px,3px)}80%{transform:translate(3px,-3px)}100%{transform:translate(0)}}@keyframes scanline{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,255,136,.7)}70%{box-shadow:0 0 0 15px rgba(0,255,136,0)}100%{box-shadow:0 0 0 0 rgba(0,255,136,0)}}@keyframes shine{0%{transform:translateX(-100%) rotate(30deg)}100%{transform:translateX(100%) rotate(30deg)}}@keyframes terminal-flicker{0%,100%{opacity:.8}50%{opacity:1}}@keyframes hack-effect{0%{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}20%{clip-path:polygon(0 10%,100% 20%,100% 80%,0 90%)}40%{clip-path:polygon(0 30%,100% 20%,100% 80%,0 70%)}60%{clip-path:polygon(0 50%,100% 40%,100% 60%,0 50%)}80%{clip-path:polygon(0 70%,100% 80%,100% 20%,0 30%)}100%{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}}.blink{animation:blink 1s step-end infinite}.glitch{text-shadow:0 0 5px var(--neon-purple);animation:glitch 2s infinite;position:relative}.matrix-bg{position:fixed;top:0;left:0;z-index:-2;opacity:.1}.noise{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVGhD7cExAQAwDMCg+zfdm1gQ+JMBMiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyP4FHw8QyJ3z4QAAAABJRU5ErkJggg==');opacity:.03;z-index:-1;pointer-events:none}header{padding:2rem;text-align:center;border-bottom:1px dashed var(--matrix-green);position:relative;overflow:hidden;background:var(--terminal-bg);box-shadow:0 0 30px rgba(0,255,136,.1)}header::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--matrix-green),transparent);animation:scanline 3s linear infinite}.container{max-width:1400px;margin:0 auto;padding:1rem;position:relative;animation:terminal-flicker 5s infinite}.tool-tabs{display:flex;margin-bottom:1rem;border-bottom:1px solid var(--matrix-green);flex-wrap:wrap}.tool-tab{padding:.7rem 1.2rem;cursor:pointer;border:1px solid transparent;border-bottom:none;margin-right:.5rem;border-radius:5px 5px 0 0;transition:all .3s;position:relative;overflow:hidden;background:rgba(0,20,10,.5)}.tool-tab::before{content:"";position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--matrix-green);transform:scaleX(0);transition:transform .3s}.tool-tab.active{background:rgba(0,255,136,.1);border-color:var(--matrix-green);border-bottom:1px solid var(--terminal-bg);margin-bottom:-1px}.tool-tab.active::before{transform:scaleX(1)}.tool-tab:hover:not(.active){background:rgba(0,255,136,.05)}.search-box{width:100%;padding:.8rem 1rem;margin:1rem 0;background:rgba(0,10,5,.7);border:1px solid var(--matrix-green);color:var(--matrix-green);font-family:'Courier New',monospace;font-size:1rem;border-radius:5px;transition:all .3s;box-shadow:0 0 10px rgba(0,255,136,.1)}.search-box:focus{outline:0;box-shadow:0 0 20px var(--matrix-green);border-color:var(--neon-purple)}.search-box::placeholder{color:rgba(0,255,136,.5)}.tool-section{margin:2rem 0;padding:1.5rem;border:1px solid var(--matrix-green);border-radius:5px;background:var(--terminal-bg);position:relative;overflow:hidden;box-shadow:0 0 20px rgba(0,255,136,.05)}.tool-section::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,255,136,.03) 0,rgba(0,136,255,.03) 50%,rgba(204,0,255,.03) 100%);z-index:-1}.tool-section h2{margin-bottom:1rem;color:var(--hacker-blue);position:relative;padding-left:1rem}.tool-section h2::before{content:">>";position:absolute;left:-.5rem;color:var(--neon-purple)}.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin-top:1.5rem}.tool-card{padding:1.5rem;border:1px solid var(--matrix-green);border-radius:5px;transition:all .4s;position:relative;overflow:hidden;background:rgba(0,15,8,.6);backdrop-filter:blur(5px)}.tool-card::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(to bottom right,transparent 45%,rgba(0,255,136,.1) 50%,transparent 55%);transform:rotate(30deg);animation:shine 4s infinite}.tool-card:hover{box-shadow:0 0 30px var(--matrix-green);transform:translateY(-8px) scale(1.03);border-color:var(--neon-purple);z-index:10}.tool-card h3{margin-bottom:.8rem;color:var(--hacker-blue);position:relative;display:inline-block;font-size:1.2rem}.tool-card h3::after{content:"";position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--neon-purple);transition:width .4s}.tool-card:hover h3::after{width:100%}.tool-card p{margin-bottom:1rem;font-size:.95rem;color:rgba(0,255,136,.8);line-height:1.5}.tool-card a{color:var(--neon-purple);text-decoration:none;font-weight:700;position:relative;display:inline-flex;align-items:center;padding:.3rem 0;transition:all .3s}.tool-card a::after{content:"↗";margin-left:.5rem;font-size:.8rem;opacity:0;transition:opacity .3s}.tool-card a:hover::after{opacity:1}.tool-card a:hover{color:var(--cyber-yellow);text-shadow:0 0 5px var(--cyber-yellow)}.tool-card .badge{position:absolute;top:0;right:0;padding:.3rem .8rem;background:var(--cyber-red);color:#fff;font-size:.7rem;border-radius:0 5px 0 5px;text-transform:uppercase;letter-spacing:1px}.tool-card .badge.new{background:var(--cyber-yellow);color:var(--dark-bg)}.cyber-button{background:0 0;color:var(--matrix-green);border:1px solid var(--matrix-green);padding:.7rem 1.5rem;margin:.5rem;font-family:'Courier New',monospace;cursor:pointer;position:relative;overflow:hidden;transition:all .4s;text-transform:uppercase;letter-spacing:1px;font-weight:700;border-radius:3px}.cyber-button:hover{background:rgba(0,255,136,.1);box-shadow:0 0 15px var(--matrix-green);text-shadow:0 0 5px var(--matrix-green);color:var(--cyber-yellow);border-color:var(--cyber-yellow)}.cyber-button::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,255,136,.3),transparent);transition:all .8s}.cyber-button:hover::before{left:100%}.tool-content{display:none;animation:fadeIn .5s}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.tool-content.active{display:block}.cyber-alert{position:fixed;bottom:20px;right:20px;padding:1.5rem;background:rgba(0,20,10,.95);border:1px solid var(--cyber-red);border-radius:5px;max-width:350px;transform:translateX(150%);transition:transform .6s cubic-bezier(.68, -.55, .27, 1.55);z-index:1000;box-shadow:0 0 20px rgba(255,0,51,.2)}.cyber-alert.show{transform:translateX(0)}.cyber-alert h4{color:var(--cyber-red);margin-bottom:.8rem;font-size:1.2rem;text-transform:uppercase;letter-spacing:1px}.cyber-alert p{color:var(--matrix-green);font-size:.95rem;line-height:1.5}.cyber-alert .close{position:absolute;top:10px;right:10px;color:var(--matrix-green);cursor:pointer;font-size:1.2rem;transition:all .3s}.cyber-alert .close:hover{color:var(--cyber-red);transform:rotate(90deg)}@media (max-width:992px){.tool-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}header{padding:1.5rem}}@media (max-width:768px){.tool-grid{grid-template-columns:1fr}.tool-tabs{flex-direction:column;border-bottom:none}.tool-tab{margin-right:0;margin-bottom:.5rem;border-radius:5px;border:1px solid var(--matrix-green)}.tool-tab.active{margin-bottom:.5rem;border-bottom:1px solid var(--matrix-green)}.container{padding:.5rem}.tool-section{padding:1rem}}.pulse{animation:pulse 3s infinite}.hack-effect{animation:hack-effect 1s}.terminal-input{position:relative;margin:1rem 0}.terminal-input input{width:100%;padding:.8rem 1rem .8rem 2.5rem;background:rgba(0,10,5,.7);border:1px solid var(--matrix-green);color:var(--matrix-green);font-family:'Courier New',monospace;border-radius:5px}.terminal-input::before{content:">";position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--neon-purple)}.cyber-progress{height:4px;background:rgba(0,255,136,.2);border-radius:2px;margin:1rem 0;overflow:hidden}.cyber-progress-bar{height:100%;background:linear-gradient(90deg,var(--matrix-green),var(--neon-purple));width:0;transition:width 1s}.perspective-box{perspective:1000px}.floating-card{transform-style:preserve-3d;transition:transform .5s}.floating-card:hover{transform:rotateY(10deg) rotateX(-5deg) translateY(-10px)}</style>
+</head>
+<body>
+<canvas id=matrix class=matrix-bg></canvas>
+<div class=noise></div>
+<div class=cyber-terminal>
+<header>
+<h1 class=glitch>💀 CYBERPUNK HACKER TERMINAL v4.0 <span class=blink>_</span></h1>
+<p id=typed-text></p>
+<div class=cyber-progress>
+<div class=cyber-progress-bar id=system-load></div>
+</div>
+</header>
+<div class=container>
+<div class=tool-tabs>
+<div class="tool-tab active" data-tab=all>Все инструменты</div>
+<div class=tool-tab data-tab=mail>📧 Почты</div>
+<div class=tool-tab data-tab=passwords>🔐 Пароли</div>
+<div class=tool-tab data-tab=vpn>🌐 VPN/Прокси</div>
+<div class=tool-tab data-tab=osint>🕵️‍♂️ OSINT</div>
+<div class=tool-tab data-tab=crypto>₿ Крипта</div>
+<div class=tool-tab data-tab=other>🔧 Разное</div>
+</div>
+<div class=terminal-input>
+<input class=search-box placeholder="Введите запрос для поиска..." id=search>
+</div>
+<div class="tool-content active" id=all-tools>
+<section class="tool-section perspective-box">
+<h2>>> 📧 ВРЕМЕННЫЕ ПОЧТЫ</h2>
+<div class=tool-grid>
+<div class="tool-card floating-card">
+<div class="badge new">New</div>
+<h3>10 Minute Mail PRO</h3>
+<p>Улучшенная версия с API доступом и автоматическим обновлением</p>
+<a href=https://10minutemail.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Temp-Mail Elite</h3>
+<p>Расширенный функционал с возможностью переадресации</p>
+<a href=https://temp-mail.org target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>Hot</div>
+<h3>Guerrilla Mail X</h3>
+<p>Военная версия с шифрованием и самоуничтожением</p>
+<a href=https://www.guerrillamail.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Mail.tm Secure</h3>
+<p>Без регистрации с автоматическим PGP шифрованием</p>
+<a href=https://mail.tm target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>YOPmail Dark</h3>
+<p>Анонимный доступ через Tor сеть</p>
+<a href=https://yopmail.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class="badge new">New</div>
+<h3>Mohmal Premium</h3>
+<p>Приватные домены и неограниченное время жизни</p>
+<a href=https://www.mohmal.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Cock.li VIP</h3>
+<p>Эксклюзивные домены для избранных</p>
+<a href=https://cock.li target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Temp-Mail.io API</h3>
+<p>Полный контроль через REST API</p>
+<a href=https://temp-mail.io target=_blank>Открыть</a>
+</div>
+</div>
+</section>
+<section class="tool-section perspective-box">
+<h2>>> 🔐 ГЕНЕРАТОРЫ ПАРОЛЕЙ</h2>
+<div class=tool-grid>
+<div class="tool-card floating-card">
+<div class=badge>Top</div>
+<h3>Bitwarden Vault</h3>
+<p>Генератор с интеграцией в менеджер паролей</p>
+<a href=https://bitwarden.com/password-generator/ target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>LastPass Military</h3>
+<p>Генератор для спецслужб с алгоритмом NSA</p>
+<a href=https://www.lastpass.com/password-generator target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class="badge new">New</div>
+<h3>NordPass Quantum</h3>
+<p>Квантово-стойкие пароли для будущего</p>
+<a href=https://nordpass.com/password-generator/ target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>1Password X</h3>
+<p>Генератор с искусственным интеллектом</p>
+<a href=https://1password.com/password-generator/ target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Strong Password Pro</h3>
+<p>Настройка каждого символа в пароле</p>
+<a href=https://strongpasswordgenerator.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>Science</div>
+<h3>Random.org</h3>
+<p>Настоящая случайность на основе атмосферного шума</p>
+<a href=https://www.random.org/passwords/ target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>PasswordsGenerator++</h3>
+<p>Генератор с запоминаемыми фразами и мнемоникой</p>
+<a href=https://passwordsgenerator.net target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Avast Secure</h3>
+<p>Генератор с проверкой на утечки в реальном времени</p>
+<a href=https://www.avast.com/random-password-generator target=_blank>Открыть</a>
+</div>
+</div>
+</section>
+<section class="tool-section perspective-box">
+<h2>>> 🌐 VPN И АНОНИМАЙЗЕРЫ</h2>
+<div class=tool-grid>
+<div class="tool-card floating-card">
+<div class=badge>No Logs</div>
+<h3>Mullvad VPN</h3>
+<p>Оплата биткоином и наличными без регистрации</p>
+<a href=https://mullvad.net target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>Anonymous</div>
+<h3>Tor Browser</h3>
+<p>Полная анонимность в darknet</p>
+<a href=https://www.torproject.org target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>ProtonVPN+</h3>
+<p>Премиум серверы с повышенной безопасностью</p>
+<a href=https://protonvpn.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>Russia</div>
+<h3>GoodbyeDPI</h3>
+<p>Обход блокировок РКН и DPI</p>
+<a href=https://github.com/ValdikSS/GoodbyeDPI target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>IVPN Ultra</h3>
+<p>Мульти-хоп цепочки через несколько стран</p>
+<a href=https://www.ivpn.net target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class="badge new">New</div>
+<h3>AdGuard VPN</h3>
+<p>Блокировка рекламы и трекеров в одном</p>
+<a href=https://adguard-vpn.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>I2P Dark</h3>
+<p>Альтернативная анонимная сеть</p>
+<a href=https://geti2p.net target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>JonDo Elite</h3>
+<p>Каскадные анонимные прокси</p>
+<a href=https://anonymous-proxy-servers.net target=_blank>Открыть</a>
+</div>
+</div>
+</section>
+<section class="tool-section perspective-box">
+<h2>>> 🕵️‍♂️ OSINT ИНСТРУМЕНТЫ</h2>
+<div class=tool-grid>
+<div class="tool-card floating-card">
+<div class=badge>IoT</div>
+<h3>Shodan Pro</h3>
+<p>Поиск уязвимых устройств по всему миру</p>
+<a href=https://www.shodan.io target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Have I Been Pwned?</h3>
+<p>Проверка почты в 10+ миллиардах утечек</p>
+<a href=https://haveibeenpwned.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>FBI</div>
+<h3>Sherlock Ultra</h3>
+<p>Поиск аккаунтов по 500+ соцсетям</p>
+<a href=https://github.com/sherlock-project/sherlock target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Wayback Machine</h3>
+<p>Архив интернета с 1996 года</p>
+<a href=https://web.archive.org target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class="badge new">New</div>
+<h3>Censys 2.0</h3>
+<p>Мониторинг интернет-активов в реальном времени</p>
+<a href=https://censys.io target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Epieos OSINT</h3>
+<p>Глубокая аналитика соцсетей и метаданных</p>
+<a href=https://epieos.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>WhatsMyName Pro</h3>
+<p>Поиск по 1000+ платформам</p>
+<a href=https://whatsmyname.app target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>Leaks</div>
+<h3>IntelX Gold</h3>
+<p>Доступ к закрытым базам утечек</p>
+<a href=https://intelx.io target=_blank>Открыть</a>
+</div>
+</div>
+</section>
+<section class="tool-section perspective-box">
+<h2>>> ₿ КРИПТОГРАФИЯ</h2>
+<div class=tool-grid>
+<div class="tool-card floating-card">
+<div class=badge>Crypto</div>
+<h3>Bitcoin Mixer</h3>
+<h3>Bitcoin Mixer</h3>
+<p>Анонимное смешивание биткоинов</p>
+<a href=https://bitcoinmixer.io target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>Privacy</div>
+<h3>Monero Wallet</h3>
+<p>Кошелек для полностью анонимных транзакций</p>
+<a href=https://www.getmonero.org target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>PGP Generator</h3>
+<p>Создание PGP ключей для шифрования</p>
+<a href=https://pgpkeygen.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class="badge new">New</div>
+<h3>Cryptonator</h3>
+<p>Мультивалютный кошелек с обменником</p>
+<a href=https://www.cryptonator.com target=_blank>Открыть</a>
+</div>
+</div>
+</section>
+<section class="tool-section perspective-box">
+<h2>>> 🔧 РАЗНОЕ</h2>
+<div class=tool-grid>
+<div class="tool-card floating-card">
+<div class=badge>Security</div>
+<h3>VirusTotal Pro</h3>
+<p>Проверка файлов 60+ антивирусами</p>
+<a href=https://www.virustotal.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>EXIF Meta</h3>
+<p>Полный анализ метаданных изображений</p>
+<a href=https://exif.tools target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>Anon</div>
+<h3>Fake Identity</h3>
+<p>Генератор правдоподобных фальшивых личностей</p>
+<a href=https://www.fakeaddressgenerator.com target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Temp-Phone Pro</h3>
+<p>Временные номера для SMS верификации</p>
+<a href=https://temp-phone.org target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class="badge new">New</div>
+<h3>SMS-Activate</h3>
+<p>Аренда номеров для активации аккаунтов</p>
+<a href=https://sms-activate.org target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Fingerprint</h3>
+<p>Анализ цифрового отпечатка браузера</p>
+<a href=https://amiunique.org target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<h3>Privacy Test</h3>
+<p>Комплексная проверка приватности</p>
+<a href=https://privacytests.org target=_blank>Открыть</a>
+</div>
+<div class="tool-card floating-card">
+<div class=badge>Leaks</div>
+<h3>Breach Alarm</h3>
+<p>Мониторинг утечек ваших данных</p>
+<a href=https://breachalarm.com target=_blank>Открыть</a>
+</div>
+</div>
+</section>
+</div>
+<div class=tool-content id=mail-tools>
+</div>
+<div class=tool-content id=passwords-tools>
+</div>
+</div>
+</div>
+<div class=cyber-alert id=alert>
+<span class=close onclick=closeAlert()>✕</span>
+<h4>⚠ ВНИМАНИЕ! ⚠</h4>
+<p>Используйте эти инструменты только в законных целях. Администрация не несет ответственности за ваши действия.</p>
+<button class=cyber-button onclick=closeAlert() style=margin-top:10px>ПОНЯТНО</button>
+</div>
+<div id=click-effects></div>
+<script>const canvas=document.getElementById("matrix"),ctx=canvas.getContext("2d");canvas.width=window.innerWidth,canvas.height=window.innerHeight;const chars="01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンABCDEFGHIJKLMNOPQRSTUVWXYZ$#%&@",fontSize=16,columns=canvas.width/16,drops=[];for(let e=0;e<columns;e++)drops[e]={y:-100*Math.random(),speed:2+5*Math.random(),length:10+Math.floor(20*Math.random())};function drawMatrix(){ctx.fillStyle="rgba(10, 10, 10, 0.05)",ctx.fillRect(0,0,canvas.width,canvas.height),ctx.fillStyle="#00ff88",ctx.font="bold 16px 'Courier New'";for(let e=0;e<drops.length;e++){const t=chars.charAt(Math.floor(Math.random()*chars.length)),o=16*e,r=drops[e].y,a=ctx.createLinearGradient(o,r,o,r+16);a.addColorStop(0,"#00ff88"),a.addColorStop(1,"#005522"),ctx.fillStyle=a,ctx.fillText(t,o,r),drops[e].y+=drops[e].speed,drops[e].y>canvas.height+16*drops[e].length&&(drops[e].y=-100*Math.random(),drops[e].speed=2+5*Math.random(),drops[e].length=10+Math.floor(20*Math.random()))}}setInterval(drawMatrix,30);const phrases=["Initializing cyber terminal...","Loading hacking tools...","Decrypting security protocols...","Bypassing firewalls...","Establishing secure connection...","Access granted. Welcome back, admin."];let currentPhrase=0,currentChar=0,isDeleting=!1,typingSpeed=100;function typeWriter(){const e=document.getElementById("typed-text"),t=phrases[currentPhrase];isDeleting?(e.textContent=t.substring(0,currentChar-1),currentChar--,typingSpeed=50):(e.textContent=t.substring(0,currentChar+1),currentChar++,typingSpeed=100+50*Math.random()),isDeleting||currentChar!==t.length?isDeleting&&0===currentChar&&(isDeleting=!1,currentPhrase=(currentPhrase+1)%phrases.length,typingSpeed=500):(isDeleting=!0,typingSpeed=1500),setTimeout(typeWriter,typingSpeed)}setTimeout(typeWriter,1e3);let load=0;const systemLoad=document.getElementById("system-load"),loadInterval=setInterval((()=>{load+=10*Math.random(),load>=100?(clearInterval(loadInterval),systemLoad.style.width="100%"):systemLoad.style.width=load+"%"}),100);function createClickEffect(e,t){const o=document.createElement("div");o.style.position="fixed",o.style.left=`${e}px`,o.style.top=`${t}px`,o.style.width="10px",o.style.height="10px",o.style.borderRadius="50%",o.style.background="radial-gradient(circle, #00ff88, transparent)",o.style.pointerEvents="none",o.style.transform="translate(-50%, -50%) scale(0)",o.style.transition="transform 0.5s, opacity 0.5s",document.body.appendChild(o),setTimeout((()=>{o.style.transform="translate(-50%, -50%) scale(10)",o.style.opacity="0"}),10),setTimeout((()=>{o.remove()}),600)}function closeAlert(){document.getElementById("alert").classList.remove("show")}function checkMobile(){window.innerWidth<768?document.querySelectorAll(".tool-grid").forEach((e=>{e.style.gridTemplateColumns="1fr"})):document.querySelectorAll(".tool-grid").forEach((e=>{e.style.gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"}))}document.getElementById("search").addEventListener("input",(function(e){const t=e.target.value.toLowerCase().trim(),o=document.querySelectorAll(".tool-card");""!==t?o.forEach((e=>{const o=e.querySelector("h3").textContent.toLowerCase(),r=e.querySelector("p").textContent.toLowerCase();o.includes(t)||r.includes(t)?(e.style.display="block",e.classList.add("pulse"),setTimeout((()=>e.classList.remove("pulse")),1e3)):e.style.display="none"})):o.forEach((e=>e.style.display="block"))})),document.querySelectorAll(".tool-tab").forEach((e=>{e.addEventListener("click",(function(){const e=document.querySelector(".tool-tab.active");e&&(e.classList.remove("active"),e.classList.add("hack-effect"),setTimeout((()=>e.classList.remove("hack-effect")),1e3)),this.classList.add("active"),document.querySelectorAll(".tool-content").forEach((e=>{e.classList.remove("active")}));const t=this.getAttribute("data-tab"),o=document.getElementById(t+"-tools");o.classList.add("active"),o.classList.add("hack-effect"),setTimeout((()=>o.classList.remove("hack-effect")),500),window.scrollTo({top:0,behavior:"smooth"})}))})),document.querySelectorAll(".floating-card").forEach((e=>{e.addEventListener("mousemove",(t=>{const o=e.getBoundingClientRect(),r=t.clientX-o.left,a=t.clientY-o.top,s=(r-o.width/2)/20,n=(o.height/2-a)/20;e.style.transform=`rotateY(${s}deg) rotateX(${n}deg) translateY(-10px)`,e.style.boxShadow=`${2*s}px ${2*n}px 30px rgba(0, 255, 136, 0.3)`})),e.addEventListener("mouseleave",(()=>{e.style.transform="",e.style.boxShadow="0 0 20px rgba(0, 255, 136, 0.1)"}))})),document.addEventListener("click",(function(e){("A"===e.target.tagName||e.target.classList.contains("cyber-button"))&&createClickEffect(e.clientX,e.clientY)})),setTimeout((()=>{document.getElementById("alert").classList.add("show")}),3e3),setInterval((()=>{const e=document.querySelector("h1");e.classList.remove("glitch"),e.offsetWidth,e.classList.add("glitch");const t=["#00ff88","#ff0033","#0088ff","#cc00ff"],o=t[Math.floor(Math.random()*t.length)];e.style.color=o}),5e3),window.addEventListener("resize",checkMobile),checkMobile(),setTimeout((()=>{document.querySelector("header").style.background="linear-gradient(to right, rgba(0, 20, 10, 0.9), rgba(0, 40, 20, 0.7))",document.querySelector("header h1").style.textShadow="0 0 10px #00ff88"}),4e3)</script>
+</body>
+</html>
+
+#  ___  _                               
+# / _ \| |__  _   _ ______ ___   ____ _ 
+#| | | | '_ \| | | |_  / _` \ \ / / _` |
+#| |_| | |_) | |_| |/ / (_| |\ V / (_| | _)
+# \___/|_.__/ \__, /___\__,_| \_/ \__,_| 
+#             |___/                     
